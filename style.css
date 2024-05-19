@@ -9,6 +9,9 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+.home-body-wrapper {
+  width: 100%;
+}
 .home-body-wrapper .home-navbar a {
   text-decoration: none;
   color: black;
@@ -180,6 +183,11 @@ ul {
     flex-direction: column;
     gap: 50px;
   }
+  @media (max-width: 991px) {
+    .feature-container br {
+      display: none;
+    }
+  }
   .home-body-wrapper .home br {
     display: none;
   }
@@ -206,6 +214,7 @@ ul {
   }
   .home-body-wrapper .popcourse {
     row-gap: 30px;
+    flex-direction: column;
   }
   .home-body-wrapper .wrapper-course p {
     font-size: 16px;
@@ -230,6 +239,38 @@ ul {
     padding: 50px 75px;
   }
 }
+
+.home-body-wrapper .course {
+  padding: 20px 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  row-gap: 30px;
+}
+.home-body-wrapper .course div {
+  border: rgb(167, 167, 167) 1px solid;
+  cursor: pointer;
+  max-width: 320px;
+  min-height: 380px;
+}
+.home-body-wrapper .course img {
+  width: 100%;
+}
+.home-body-wrapper .course-c:not(:first-child) {
+  margin-top: 20px;
+}
+.home-body-wrapper .course-c {
+  margin: 10px 10px;
+}
+.home-body-wrapper .course-c:nth-child(4) {
+  color: #38393e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .home-body-wrapper .home h1 {
     width: 100%;
@@ -252,6 +293,9 @@ ul {
     padding: 20px 30px;
     margin: 35px 0;
   }
+  .home-body-wrapper .popcourse {
+    flex-direction: column !important;
+  }
   .home-body-wrapper .popcourse div {
     max-width: 100%;
     width: 100%;
@@ -259,12 +303,40 @@ ul {
   .home-body-wrapper footer {
     padding: 30px 30px;
   }
+  .home-body-wrapper .course {
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+  }
+  .home-body-wrapper .course div {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 @media (max-width: 475px) {
+  .home-body-wrapper .home-content .btn-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120px;
+    gap: 10px;
+  }
+  .home-body-wrapper .home-content p {
+    margin: 0;
+  }
+
   .home-body-wrapper .home h1 {
     width: 100%;
     font-size: 26px;
   }
+  /* .home-body-wrapper .course img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+} */
 }
 @media (max-width: 325px) {
+  footer input{
+    width: 250px;
+  }
 }
