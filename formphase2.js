@@ -56,6 +56,15 @@ function validateForm() {
         document.getElementById('incomeError').innerText = '';
         report += `Monthly Income: ${income}\n`;
     }
+    // Validate country
+    if (!country) {
+        document.getElementById("countryError").innerText = "Country is required.";
+        isValid = false;
+    } else{
+        document.getElementById('countryError').innerText = '';
+        report += `country: ${country.value}\n`;
+    }
+
 
     // Gender validation
     const gender = document.querySelector('input[name="gender"]:checked');
